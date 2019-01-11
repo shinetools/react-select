@@ -1001,7 +1001,7 @@ export default class Select extends Component<Props, State> {
     if (!touch) {
       return;
     }
-    
+
     this.initialTouchX = touch.clientX;
     this.initialTouchY = touch.clientY;
     this.userIsDragging = false;
@@ -1493,9 +1493,10 @@ export default class Select extends Component<Props, State> {
       return selectValues;
     }
 
-    if (inputValue) {
-      return null;
-    }
+    // Override behaviour to make native iso
+    // if (inputValue) {
+    //   return null;
+    // }
 
     const singleValue = selectValue[0];
     return (
